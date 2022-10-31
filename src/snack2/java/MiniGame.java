@@ -6,11 +6,10 @@ import java.util.Random;
 public class MiniGame {
 
 	public static void main(String[] args) {
-		MiniGame mg = new MiniGame();
-		mg.run();
+		MiniGame.run();
 	}
 	
-	private void run() {
+	public static void run() {
 		int userNumb = MiniGame.askNumb(100);
 		int n = MiniGame.getRand(100);
 		int numb = MiniGame.getRand(100);
@@ -18,7 +17,13 @@ public class MiniGame {
 		System.out.println("CPU = " + numb);
 		System.out.println("Numero da indovinare = " + n);
 		int result = MiniGame.getClosest(userNumb, numb, n);
-		System.out.println("Risultato: " + result);
+		if(result == 1) {
+			System.out.println("Hai vinto!");
+		} else if(result == -1) {
+			System.out.println("Hai perso!");
+		} else {
+			System.out.println("Pareggio..");
+		}
 	}
 	
 	public static int getClosest(int a, int b, int n) {
