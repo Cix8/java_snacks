@@ -5,7 +5,7 @@ import snack2.java.MiniGame;
 public class PrimeNumber {
 
 	public static void main(String[] args) {
-		int num = MiniGame.getRand(100);
+		int num = MiniGame.askNumb(0);
 		PrimeNumber.consoleResponse(PrimeNumber.isPrimeNumber(num), num);
 	}
 	

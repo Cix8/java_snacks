@@ -43,7 +43,11 @@ public class MiniGame {
 	public static int askNumb(int max) {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Inserisci un numero da 1 a " + max);
+		if(max == 0) {
+			System.out.println("Inserisci un numero");			
+		} else {
+			System.out.println("Inserisci un numero da 1 a " + max);			
+		}
 		String userNum = scan.nextLine();
 		
 		int result = Integer.parseInt(userNum);
